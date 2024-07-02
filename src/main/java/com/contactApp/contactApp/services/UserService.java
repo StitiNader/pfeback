@@ -1,11 +1,20 @@
 package com.contactApp.contactApp.services;
 
-import com.contactApp.contactApp.model.App_User;
+import com.contactApp.contactApp.model.User;
+
+import java.util.List;
+
+public interface UserService {
+    User addUser(User user);
+
+    void deleteUserById(Integer id);
+
+    User getUserById(Integer id);
+
+    List<User> getAllUsers();
+
+    boolean existByEmail(String email);
 
 
-public interface UserService   {
-    void addUser(App_User user);
-    void updateUser(App_User user);
-    void deleteUser(int id);
-    App_User getUser(int id);
+    User updateUserPut(Integer id, User user);
 }
